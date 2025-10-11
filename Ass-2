@@ -1,0 +1,167 @@
+Take in two numbers and an operator (+, -, *, /) and calculate the value. (Use if conditions)
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a first number");
+        double a=sc.nextDouble();
+        System.out.println("Enter a second number");
+        double b=sc.nextDouble();
+        System.out.println("Enter the operation('+','-','*','/')");
+        char operation=sc.next().charAt(0);
+        if(operation=='+'){
+            double sum=a+b;
+            System.out.println("Sum is "+sum);
+        }else if(operation=='-'){
+            double sub=a-b;
+            System.out.println("Substraction is "+sub);
+        }else if(operation=='*'){
+            double pro=a*b;
+            System.out.println("Product is "+pro);
+        }else if(operation=='/'){
+            if(b==0){
+               System.out.println("Enter a valid number"); 
+            }else{
+                double div=a/b;
+            System.out.println("Division is "+div);
+            }
+        }else{
+            System.out.println("Enter a valid operation");
+        }
+    }
+}
+-------------------------------------------------------------
+
+Take 2 numbers as input and print the largest number.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a first number");
+        int a=sc.nextInt();
+        System.out.println("Enter a second number");
+        int b=sc.nextInt();
+        if(a>b){
+            System.out.println(a+" is a greater number");
+        }else if(b>a){
+            System.out.println(b+" is a greater number");
+        }else{
+            System.out.println("both are equal");
+        }
+    }
+}
+----------------------------------------------------------
+Input currency in rupees and output in USD.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the total Rupees");
+        double rupees=sc.nextDouble();
+        double usd=rupees/88.67;
+        System.out.println("Total Dollors is"+usd);
+    }
+}
+------------------------------------------------------
+To calculate Fibonacci Series up to n numbers.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the number");
+        int n=sc.nextInt();
+        int a=0;
+        int b=1;
+        int sum=0;
+        System.out.print(a+" "+b);
+        for(int i=2;i<n;i++){
+            sum=a+b;
+            a=b;
+            b=sum;
+            System.out.print(" "+sum);
+        }
+    }
+}
+---------------------------------------------------------
+
+To find out whether the given String is Palindrome or not.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the number");
+        int original=sc.nextInt();
+        int n=original;
+        int rev=0;
+        while(original!=0){
+            int rem=original%10;
+            rev=rev*10+rem;
+            original=original/10;
+        }
+        if(n == rev){
+            System.out.println("is a pallindrome");
+        }else{
+            System.out.println("it is not a pallindrome");
+        }
+    }
+}
+------------------------------------------------------------
+
+Write a program to input principal, time, and rate (P, T, R) from the user and find Simple Interest.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the Principle Ammount");
+        double p=sc.nextDouble();
+        System.out.println("Enter the Time in Years");
+        double t=sc.nextDouble();
+        System.out.println("Enter the rate of interest");
+        double r=sc.nextDouble();
+        double si=(p*t*r)/100;
+        System.out.println("Simple interest is "+si);
+    }
+}
+----------------------------------------------------------
+
+Take name as input and print a greeting message for that particular name.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the Name");
+        String name=sc.next();
+         System.out.println("Hello "+name);
+    }
+}
+--------------------------------------------------------
+Write a program to print whether a number is even or odd, also take input from the user.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number");
+        int num=sc.nextInt();
+        if(num%2 ==0){
+            System.out.println("the given number is even");
+        }else{
+            System.out.println("given number is odd");
+        }
+    }
+}
