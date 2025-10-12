@@ -1,0 +1,64 @@
+Pallindrome check
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number");
+        int x= sc.nextInt();
+        int rev=0;
+        int original=x;
+        while(x != 0){
+            int rem=x%10;
+            rev=rev*10+rem;
+            x=x/10;
+        }
+        if (original==rev){
+            System.out.print(original+" the given number is a pallindrome ");
+        }else{
+            System.out.print(original+" the given number is not pallindrome ");
+        }
+    }
+}
+--------------------------------------------------------------------------
+Reversing a Number
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number");
+        int x= sc.nextInt();
+        int rev=0;
+         while(x != 0){
+            int rem=x%10;
+            rev=rev*10+rem;
+            x=x/10;
+        }
+	System.out.println("reversed number "+rev);
+     }
+}
+----------------------------------------------------------------
+Sum of Digits
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number");
+        int x= sc.nextInt();
+        int sum=0;
+        while(x != 0){
+            int rem=x%10;
+            sum=sum+rem;
+            x=x/10;
+        }
+        System.out.println("Sum of digits is "+sum);
+    }
+}
+
+-----------------------------------------------------------------
+
