@@ -1,0 +1,191 @@
+
+Even or Odd
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number");
+        int a= sc.nextInt();
+        if(a%2==0){
+            System.out.println("Given number is Even");
+        }else{
+            System.out.println("Given number is odd");
+        }
+    }
+}
+----------------------------------------------------------
+
+Positive, Negative or Zero
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number");
+        int a= sc.nextInt();
+        if(a>0){
+            System.out.println("Given number is Positive");
+        }else if(a<0){
+            System.out.println("Given number is Negetive");
+        }else{
+            System.out.println("Given number is zero");
+        }
+    }
+}
+----------------------------------------------------------
+
+Largest of Two Numbers
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter First number");
+        int a= sc.nextInt();
+        System.out.println("Enter Second number");
+        int b= sc.nextInt();
+        int max=a;
+        if(max>b){
+            System.out.println(max+"is the gretest number");
+        }else{
+            System.out.println(b+"is the greatest number");
+        }
+    }
+}
+
+--------------------------------------------------------------
+
+Largest of Three Numbers
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter First number");
+        int a= sc.nextInt();
+        System.out.println("Enter Second number");
+        int b= sc.nextInt();
+        System.out.println("Enter Third number");
+        int c= sc.nextInt();
+        if(a >= b && a >=c){
+            System.out.println(a+"is the Greatest number");
+        }
+        else if(b >= c && b >=a){
+            System.out.println(b+"is the Greatest number");
+        }else{
+            System.out.println(c+"is the Greatest number");
+        }
+    }
+}
+
+-----------------------------------------------------------------
+
+Vowel or Consonant
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a Charecter");
+        char ch= sc.next().charAt(0);
+        if (ch=='a' || ch=='e' || ch=='i'|| ch=='o' || ch=='u'){
+            System.out.println("Given Charecter is Vowel");
+        }else{
+            System.out.println("Given Charecter is Consonant");
+        }
+    }
+}
+
+----------------------------------------------------------------
+
+Simple Calculator using
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number");
+        double a= sc.nextDouble();
+        System.out.println("Enter another number");
+        double b= sc.nextDouble();
+        char operation;
+        do{
+           System.out.println("Enter the operation like +, -, *, / or q to quit");
+           operation= sc.next().charAt(0);
+           if (operation == '+'){
+               System.out.println("Sum"+(a+b));
+           }else if(operation == '-'){
+               System.out.println("Sub"+(a-b));
+           }else if(operation == '*'){
+               System.out.println("Product"+(a*b));
+           }else if(operation == '/'){
+               if(b==0){
+                   System.out.println("Invalid operation");
+               }else{
+                   System.out.println("Divide"+(a/b));
+               }
+           }else if(operation != 'q'){
+               System.out.println("Invalid Operation");
+           }
+        } while(operation != 'q');
+        
+    }
+}
+
+-----------------------------------------------------------------------------
+
+Fibonacci series
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a Number");
+        int x= sc.nextInt();
+        int a=0;
+        int b=1;
+        int sum=0;
+        System.out.print(a+" "+b+" ");
+        for(int i=2; i<x; i++){
+            sum=a+b;
+            a=b;
+            b=sum;
+            System.out.print(sum+" ");
+        }
+    }
+}
+
+------------------------------------------------------------------------------
+
+sum of natural numbers
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a Number");
+        int x= sc.nextInt();
+        int sum_Natural= x*(x+1)/2;
+        System.out.println("Sum of given natural Number is "+sum_Natural);
+    }
+}
+
+---------------------------------------------------------------------------
+
+Factorial of a Number
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a Number");
+        int n= sc.nextInt();
+        int fact=1;
+        for (int i=1; i<=n; i++){
+            fact *= i;
+        }
+        System.out.println("Factorial of given natural Number is "+fact);
+    }
+}
+----------------------------------------------------------------------------
