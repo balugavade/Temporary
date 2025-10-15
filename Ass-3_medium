@@ -1,0 +1,217 @@
+                         Intermediate Java Programs
+------------------------------------$$$$$$$$$$-----------------------------------
+
+Factorial Program In Java
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a number");
+        int n=sc.nextInt();
+        int fact=1;
+        int sum=0;
+        for(int i=1;i<=n;i++){
+            fact*=i;
+            sum+=fact;
+        }
+        System.out.println(+fact);
+    }
+}
+-------------------------------------------------------
+Calculate Electricity Bill
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the previous reading in kWh");
+        double prv=sc.nextDouble();
+        System.out.println("Enter the current reading in kWh");
+        double crt=sc.nextDouble();
+        double used=crt-prv;
+        double sum=used*6;
+        System.out.println("Enter the fixed tax in rupees");
+        double tax=sc.nextDouble();
+        System.out.println("Enter the GST in %");
+        double gst=sc.nextDouble();
+        gst=(sum*5)/100;
+        double total=sum+tax+gst;
+        System.out.println("Total bill is"+total);
+    }
+}
+---------------------------------------------------------
+Calculate Average Of N Numbers
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the nth number");
+        int n=sc.nextInt();
+        double avg=(n*(n+1))/2;
+        System.out.println("average of n numbers is "+avg);
+    }
+}
+------------------------------------------------------
+Calculate Discount Of Product
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the price of the product ");
+        double price=sc.nextInt();
+        System.out.println("Enter the discount in perentage ");
+        double discount=sc.nextDouble();
+        discount=(discount*price)/100;
+        double total=price-discount;
+        System.out.println("total cost is "+total);
+    }
+}
+----------------------------------------------------
+Calculate Distance Between Two Points
+import java.util.Scanner;
+import java.lang.Math;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter x1 ");
+        double x1=sc.nextDouble();
+        System.out.println("Enter x2 ");
+        double x2=sc.nextDouble();
+        System.out.println("Enter y1 ");
+        double y1=sc.nextDouble();
+        System.out.println("Enter y2 ");
+        double y2=sc.nextDouble();
+        double distance=Math.sqrt(((x2-x1)*(x2-x1))+((y2-y1)*(y2-y1)));
+        System.out.println("distance is "+distance);
+    }
+}
+--------------------------------------------------------------------
+Calculate Commission Percentage
+import java.util.Scanner;
+import java.lang.Math;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Ammount ");
+        double amt=sc.nextDouble();
+        System.out.println("Enter the comission ");
+        double cms=sc.nextDouble();
+        double cms_per=(cms/amt)*100;
+        System.out.println("Percentage of commision is "+cms_per);
+    }
+}
+-------------------------------------------------------------
+Power In Java
+import java.util.Scanner;
+import java.lang.Math;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a number ");
+        double n=sc.nextInt();
+        System.out.println("Enter the power ");
+        double pwr=sc.nextInt();
+        double fnl=Math.pow(n, pwr);
+        System.out.println("the final number is "+fnl);
+    }
+}
+-------------------------------------------------------
+Calculate Depreciation of Value
+import java.util.Scanner;
+import java.lang.Math;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the cost ");
+        double cost=sc.nextInt();
+        System.out.println("Enter the estimated value ");
+        double slavage_value=sc.nextInt();
+        System.out.println("Enter the years ");
+        double year=sc.nextInt();
+        double dep=(cost-slavage_value)/year;
+        System.out.println("depriciation value is  "+dep);
+    }
+}
+------------------------------------------------------
+Calculate Batting Average
+
+Calculate CGPA Java Program
+import java.util.Scanner;
+import java.lang.Math;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the total marks ");
+        double total=sc.nextInt();
+        System.out.println("Enter the obtained marks ");
+        double obt=sc.nextInt();
+        double per=(obt/total)*100;
+        double cgpa=per/9.5;
+        System.out.println("obtained cgpa "+cgpa);
+        System.out.println("obtained percentage "+per);
+    }
+}
+------------------------------------------------------
+Compound Interest Java Program
+import java.util.Scanner;
+import java.lang.Math;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the ammount ");
+        double amt=sc.nextInt();
+        System.out.println("Enter the rate of interest ");
+        double per=sc.nextInt();
+        System.out.println("Enter the years ");
+        int yr=sc.nextInt();
+        for(int i=1;i<=yr;i++){
+            double interest=(amt*per)/100;
+            amt+=interest;
+        }
+        System.out.println("compound interest is "+amt);
+    }
+}
+-----------------------------------------------------------
+Calculate Average Marks
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int sum = 0;
+        int n = 5;  // number of subjects
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print("Enter marks for subject " + i + ": ");
+            int marks = sc.nextInt();
+            sum += marks;
+        }
+
+        double average = sum / (double)n;  // convert to double for decimal average
+        System.out.println("Average marks = " + average);
+    }
+}
+------------------------------------------------------------
+Sum Of N Numbers
+import java.util.Scanner;
+import java.lang.Math;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the nth number ");
+        int n=sc.nextInt();
+        int sum =(n*(n+1))/2;
+        System.out.println("sum of n natural numbers "+sum);
+    }
+}
+----------------------------------------------------------
