@@ -1,0 +1,318 @@
+Define two methods to print the maximum and the minimum number respectively among three numbers entered by the user.
+
+import java.util.Scanner;
+class Main {
+    Scanner sc= new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the First Number");
+        int num1=sc.nextInt();
+        System.out.println("Enter the Second Number");
+        int num2=sc.nextInt();
+        System.out.println("Enter the Third Number");
+        int num3=sc.nextInt();
+        int maximum=max(num1,num2,num3);
+        int minimum=min(num1,num2,num3);
+        System.out.println("max num is "+maximum);
+        System.out.println("min number is "+minimum);
+    }
+    static int max(int num1,int num2,int num3){
+        int max=0;
+        if(num1>num2 & num1>num3){
+            max=num1;
+        }else if(num2>num3 & num2>num1){
+            max=num2;
+        }else{
+         max=num3;
+        }
+        return max;
+    }
+    static int min(int num1,int num2,int num3){
+        int min=0;
+        if(num1<num2 & num1<num3){
+            min=num1;
+        }else if(num2<num3 & num2<num1){
+            min=num2;
+        }else{
+         min=num3;   
+        }
+        return min;
+    }
+    
+}
+---------------------------------------------------------------------------------------------------
+Define a program to find out whether a given number is even or odd.
+
+import java.util.Scanner;
+class Main {
+    Scanner sc= new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the Number");
+        int num=sc.nextInt();
+        String result=isEvenOdd(num);
+        System.out.println("the given number is "+result);
+        
+    }
+    static String isEvenOdd(int num){
+        if(num%2==0){
+            return "Even";
+        }else{
+            return "Odd";
+        }
+    }
+    
+}
+-----------------------------------------------------------------------------------------------------
+A person is eligible to vote if his/her age is greater than or equal to 18. Define a method to find out if he/she is eligible to vote.
+
+import java.util.Scanner;
+class Main {
+    Scanner sc= new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the Age");
+        int age=sc.nextInt();
+        String result=isEligible(age);
+        System.out.println("the person is  "+result);
+        
+    }
+    static String isEligible(int age){
+        if(age>=18){
+            return "Eligible";
+        }else{
+            return "Not Eligible";
+        }
+    }
+}
+------------------------------------------------------------------------------------------------
+Write a program to print the sum of two numbers entered by user by defining your own method.
+
+import java.util.Scanner;
+class Main {
+    Scanner sc= new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int num1=sc.nextInt();
+        System.out.println("Enter the number ");
+        int num2=sc.nextInt();
+        int result=sum(num1,num2);
+        System.out.println("Sum is "+result);
+        
+    }
+    static int sum(int num1, int num2){
+        return num1+num2;
+    }
+}
+-----------------------------------------------------------------------------------------
+Define a method that returns the product of two numbers entered by user.
+
+import java.util.Scanner;
+class Main {
+    Scanner sc= new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int num1=sc.nextInt();
+        System.out.println("Enter the number ");
+        int num2=sc.nextInt();
+        int result=product(num1,num2);
+        System.out.println("Product is "+result);
+        
+    }
+    static int product(int num1, int num2){
+        return num1*num2;
+    }
+}
+-----------------------------------------------------------------------------------
+Write a program to print the circumference and area of a circle of radius entered by user by defining your own method.
+import java.util.Scanner;
+class Main {
+    Scanner sc= new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the radius ");
+        double r=sc.nextDouble();
+        double result=area(r);
+        double cir=circumference(r);
+        System.out.println("area is "+result);
+        System.out.println("circumference is "+cir);
+    }
+    static double area(double r){
+        return 3.142*r*r;
+    }
+    static double circumference(double r){
+        return 2*3.142*r;
+    }
+}
+------------------------------------------------------------------------------------
+Define a method to find out if a number is prime or not.
+import java.util.Scanner;
+class Main {
+    Scanner sc= new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the Number");
+        int num=sc.nextInt();
+        boolean result=isPrime(num);
+        System.out.println(" "+isPrime(num));
+        
+    }
+    static boolean isPrime(int num){
+        if(num<=1) return false;
+        for(int i=2;i<num;i++){
+            if(num%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+}
+-----------------------------------------------------------------------------------------
+Write a program that will ask the user to enter his/her marks (out of 100). Define a method that will display grades according to the marks entered as below:
+ 
+Marks        Grade 
+91-100         AA 
+81-90          AB 
+71-80          BB 
+61-70          BC 
+51-60          CD 
+41-50          DD 
+<=40          Fail 
+
+import java.util.Scanner;
+class Main {
+    Scanner sc= new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the marks ");
+        double marks=sc.nextDouble();
+        String result=grade(marks);
+        System.out.println(result);
+        
+    }
+    static String grade(double marks){
+        if(marks<0) return "Enter valid marks";
+        if(marks>=91 & marks<=100){
+            return "AA";
+        }else if(marks>=81 & marks<=90){
+            return "AB";
+        }else if(marks>=71 & marks<=80){
+            return "BB";
+        }else if(marks>=61 & marks<=70){
+            return "BC";
+        }else if(marks>=51 & marks<=60){
+            return "CD";
+        }else if(marks>=41 & marks<=50){
+            return "DD";
+        }else{
+            return "Fail";
+        }
+    }
+}
+------------------------------------------------------------------------------------------
+Write a program to print the factorial of a number by defining a method named 'Factorial'. Factorial of any number n is represented by n! and is equal to 1 * 2 * 3 * .... * (n-1) *n. E.g.-
+
+4! = 1 * 2 * 3 * 4 = 24 
+3! = 3 * 2 * 1 = 6 
+2! = 2 * 1 = 2 
+Also, 
+1! = 1 
+0! = 1
+
+import java.util.Scanner;
+class Main {
+    Scanner sc= new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the Number ");
+        int num=sc.nextInt();
+        int result=factorial(num);
+        System.out.println(result);
+        
+    }
+    static int factorial(int num){
+        int fact=1;
+       for(int i=1;i<=num;i++){
+           fact=fact*i;
+       }
+       return fact;
+    }
+}
+------------------------------------------------------------------------------------
+Write a function to find if a number is a palindrome or not. Take number as parameter.
+
+import java.util.Scanner;
+class Main {
+    Scanner sc= new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the Number ");
+        int num=sc.nextInt();
+        boolean result=pallindrome(num);
+        System.out.println(result);
+        
+    }
+    static boolean pallindrome(int num){
+        int sum=0;
+        int original=num;
+        while(num!=0){
+            int rev=num%10;
+            sum=sum*10+rev;
+            num=num/10;
+        }
+        return original==sum;
+    }
+}
+----------------------------------------------------------------------------------------
+Convert the programs in flow of program, first java, conditionals & loops assignments into functions.
+Write a function to check if a given triplet is a Pythagorean triplet or not. (A Pythagorean triplet is when the sum of the square of two numbers is equal to the square of the third number).
+import java.util.Scanner;
+class Main {
+    Scanner sc= new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the first Number");
+        int num1=sc.nextInt();
+        System.out.println("Enter the second Number");
+        int num2=sc.nextInt();
+        System.out.println("Enter the third Number");
+        int num3=sc.nextInt();
+        boolean result=pythagorean(num1,num2,num3);
+        System.out.println(result);
+        
+    }
+    static boolean pythagorean(int num1,int num2,int num3){
+        int cal=num1*num1+num2*num2;
+        int calc=num3*num3;
+        if(cal==calc){
+            return true;
+        }else{
+            return false;
+        }
+        
+    }
+}
+-----------------------------------------------------------------------------------------------
+Write a function that returns all prime numbers between two given numbers.
+
+
+------------------------------------------------------------------------------
+Write a function that returns the sum of first n natural numbers.
+import java.util.Scanner;
+class Main {
+    Scanner sc= new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the nth Number");
+        int num=sc.nextInt();
+        int result=sumOf(num);
+        System.out.println("the sum of N numbers is "+sumOf(num));
+        
+    }
+    static int sumOf(int num){
+        int sum=(num*(num+1))/2;
+        return sum;
+    }
+}
