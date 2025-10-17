@@ -1,0 +1,230 @@
+Given an array and a target, print the index if found, otherwise -1.
+🧩 Array: [10, 30, 20, 50, 40]
+🎯 Target: 20
+
+class Main {
+    public static void main(String[] args) {
+        int[] arr={10,30,20,50,40};
+        int target=20;
+        int result=search(arr,target);
+        System.out.println(result);
+    }
+    static int search(int[] arr,int target){
+        int index=0;
+        for(int i=0;i<arr.length-1;i++){
+            if(target==arr[i]){
+                return i;
+            }
+        }
+        return -1;
+    }
+    
+}
+-------------------------------------------------------------------
+Given an array and a target element, print "Found" if it exists in the array, otherwise "Not Found".
+🧩 Array: [5, 9, 2, 8, 3]
+🎯 Target: 7
+
+class Main {
+    public static void main(String[] args) {
+        int[] arr={5,9,2,8,3};
+        int target=2;
+        String result=search(arr,target);
+        System.out.println(result);
+    }
+    static String search(int[] arr,int target){
+        int index=0;
+        for(int i=0;i<arr.length-1;i++){
+            if(target==arr[i]){
+                return "found";
+            }
+        }
+        return "Not Found";
+    }
+    
+}
+---------------------------------------------------
+Given an array of integers, find and print the smallest element.
+🧩 Array: [8, 6, 15, 3, 9]
+class Main {
+    public static void main(String[] args) {
+        int[] arr={8, 6, 15, 3, 9};
+        int result=search(arr);
+        System.out.println(result);
+    }
+    static int search(int[] arr){
+        int min=arr[0];
+        for(int i=0;i<arr.length-1;i++){
+            if(min>arr[i]){
+                min=arr[i];
+            }
+        }
+        return min;
+    }
+    
+}
+-----------------------------------------------------------
+Given an array of integers, find and print the largest element.
+🧩 Array: [4, 10, 2, 8, 6]
+class Main {
+    public static void main(String[] args) {
+        int[] arr={4, 10, 2, 8, 6};
+        int result=search(arr);
+        System.out.println(result);
+    }
+    static int search(int[] arr){
+        int max=arr[0];
+        for(int i=0;i<arr.length-1;i++){
+            if(arr[i]>max){
+                max=arr[i];
+            }
+        }
+        return max;
+    }
+    
+}
+-----------------------------------------------------
+Given an array and a target element, count how many times the target appears.
+🧩 Array: [2, 3, 4, 3, 5, 3, 6]
+🎯 Target: 3
+class Main {
+    public static void main(String[] args) {
+        int[] arr={2, 3, 4, 3, 3, 3, 6};
+        int target=3;
+        int result=search(arr,target);
+        System.out.println(result);
+    }
+    static int search(int[] arr,int target){
+        int count=0;
+        for(int i=0;i<arr.length-1;i++){
+            if(arr[i]==target){
+                count++;
+            }
+        }
+        return count;
+    }
+    
+}
+----------------------------------------------------------------
+Given an array and a target element, print all indices where the target appears.
+🧩 Array: [7, 5, 9, 5, 2, 5]
+🎯 Target: 5
+class Main {
+    public static void main(String[] args) {
+        int[] arr={7, 5, 9, 5, 2, 5};
+        int target=5;
+        indices(arr,target);
+    }
+    static void indices(int[] arr,int target){
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]==target){
+                System.out.print(i+" ");
+            }
+        }
+    }
+    static int count(int[] arr,int target){
+        int count=0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]==target){
+                count++;
+            }
+        }
+        return count;
+    }
+    
+}
+--------------------------------------------------------------------------------
+given an array, a target, and two indices start and end, check if the target exists between those indices.
+🧩 Array: [11, 22, 33, 44, 55, 66]
+🎯 Target: 44
+🧭 Range: start = 2, end = 4
+class Main {
+    public static void main(String[] args) {
+        int[] arr={11, 22, 33, 44, 55, 66};
+        int target=44;
+        int start=2;
+        int end=4;
+        String result=indices(arr,target,start,end);
+        System.out.println(result);
+    }
+    static String indices(int[] arr,int target,int start,int end){
+        for(int i=start;i<end;i++){
+            if(arr[i]==target){
+                return "Found";
+            }
+        }
+        return "Not Found";
+    }
+}
+-------------------------------------------------------------------------------
+Given a string and a character, print the index of that character if found, otherwise -1.
+🧩 String: "hello"
+🎯 Target: 'e'
+class Main {
+    public static void main(String[] args) {
+        String str="hello";
+        char target='e';
+        String result=indices(str,target);
+        System.out.println(result);
+    }
+    static String indices(String str,char target){
+        for(int i=0;i<str.length();i++){
+            if(str.charAt(i)==target){
+                return "Found";
+            }
+        }
+        return "Not Found";
+    }
+}
+-----------------------------------------------------------------------------
+Given an array and a target element, find the first and last index where the target occurs.
+🧩 Array: [2, 4, 4, 4, 6, 8]
+🎯 Target: 4
+class Main {
+    public static void main(String[] args) {
+        int[] arr={2, 4, 4, 4, 6, 8};
+        int target=4;
+        int first=-1;
+        int last=-1;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]==target){
+                if(first==-1){
+                    first=i;
+                }
+                last=i;
+            }
+        }
+        System.out.println(+first+" "+last);
+    }
+}
+-------------------------------------------------------------------
+Search in 2D Array
+Given a 2D array (matrix) and a target element, find and print its position (row and column).
+ Array:{
+  {10, 20, 30},
+  {40, 50, 60},
+  {70, 80, 90}
+}
+🎯 Target: 60
+import java.util.Arrays;
+class Main {
+    public static void main(String[] args) {
+        int[][] arr={
+            {10, 20, 30},
+            {40, 50, 60},
+            {70, 80, 90}};
+        int target=40;
+        int[] result=search(arr,target);
+        System.out.println(Arrays.toString(result));
+    }
+    static int[] search(int[][] arr,int target){
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr[i].length;j++){
+                if(target==arr[i][j]){
+                    return new int[]{i,j};
+                }
+            }
+        }
+        return new int[]{-1,-1};
+    }
+}
