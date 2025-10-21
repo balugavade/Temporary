@@ -1,0 +1,62 @@
+Bubble sort Algorithm
+import java.util.Arrays;
+class Main {
+    public static void main(String[] args) {
+        int[] arr={4,5,2,3,1};
+        bubbleSort(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+    static int bubbleSort(int[] arr){
+        boolean isSwaped;
+        for(int i=0;i<arr.length;i++){
+            isSwaped=false;
+            for(int j=1;j<arr.length-i;j++){
+                if(arr[j]<arr[j-1]){
+                    int temp=arr[j];
+                    arr[j]=arr[j-1];
+                    arr[j-1]=temp;
+                    isSwaped=true;
+                }
+            }
+        if(isSwaped==false){
+            break;
+        }
+        }
+        return -1;
+    }
+} 
+-----------------------------------------------------------------
+selection sort
+import java.util.Arrays;
+class Main {
+    public static void main(String[] args) {
+        int[] arr={4,5,2,3,1};
+        selectionSort(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+    static void selectionSort(int[] arr){
+        for(int i=0;i<arr.length;i++){
+            int last=arr.length-1-i;
+            int maxindex=maxIndex(arr,0,last);
+            
+            swap(arr,maxindex,last);
+        }
+        
+    }
+    static void swap(int[] arr,int first,int last){
+            int temp=arr[first];
+            arr[first]=arr[last];
+            arr[last]=temp;
+    }
+    static int maxIndex(int[] arr,int start,int end){
+        int max=start;
+        for(int i=start;i<end;i++){
+            if(arr[i]>arr[max]){
+                max=i;
+            }
+        }
+        return max;
+    }
+}
+---------------------------------------------------------
+
