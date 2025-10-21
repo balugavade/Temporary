@@ -1,0 +1,84 @@
+concatination of array
+class Solution {
+    public int[] getConcatenation(int[] nums) {
+      int[] result=new int[2*nums.length];
+      if(nums.length!=0){
+        for(int i=0;i<nums.length;i++){
+            result[i]=nums[i];
+            result[nums.length+i]=nums[i];
+        }
+      }
+      return result;
+    }
+}
+-------------------------------------------------
+How many numbers are smaller than current number
+class Solution {
+    public int[] smallerNumbersThanCurrent(int[] nums) {
+        int[] result=new int[nums.length];
+        for(int i=0;i<nums.length;i++){
+            int count=0;
+            for(int j=0;j<nums.length;j++){
+                if(nums[j]<nums[i]){
+                    count++;
+                }
+            }
+            result[i]=count;
+        }
+        return result;
+    }
+}
+--------------------------------------------------------
+running sum of 1D Array
+class Solution {
+    public int[] runningSum(int[] nums) {
+        int sum=0;
+        int[] result=new int[nums.length];
+        for(int i=0;i<nums.length;i++){
+            sum=nums[i]+sum;
+            result[i]=sum;
+        }
+        return result;
+    }
+}
+-------------------------------------------------------------
+Build Array from permutation
+class Solution {
+    public int[] buildArray(int[] nums) {
+        int[] newArr=new int[nums.length];
+        for(int i=0;i<nums.length;i++){
+            newArr[i]=nums[nums[i]];
+        }
+        return newArr;
+    }
+}
+---------------------------------------------------
+number of good pairs
+class Solution {
+    public int numIdenticalPairs(int[] nums) {
+        int count=0;
+        for(int i=0;i<nums.length;i++){
+            for(int j=i+1;j<nums.length;j++){
+                if(nums[i]==nums[j]){
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+}
+--------------------------------------------------------
+transpose of a matrix
+class Solution {
+    public int[][] transpose(int[][] matrix) {
+        int[][] result=new int[matrix[0].length][matrix.length];
+        for(int i=0;i<matrix.length;i++){
+            for(int j=0;j<matrix[0].length;j++){
+                result[j][i]=matrix[i][j];
+            }
+        }
+        return result;
+    }
+}
+---------------------------------------------------------
+
